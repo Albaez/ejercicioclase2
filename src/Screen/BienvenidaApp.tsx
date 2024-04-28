@@ -14,14 +14,16 @@ const BienvenidaApp = () => {
 
     return (
         <View style={styles.container}>
+            
             <TextInput
                 style={styles.input}
                 value={nombre}
                 onChangeText={(text) => setNombre(text)}
                 placeholder="Ingrese su nombre"
             />
-            <Button title="Limpiar" onPress={clearNombre} />
+
             <Text style={styles.saludo}>¡Hola!, Bienvenido {nombre}</Text>
+            <Button title="Limpiar" onPress={clearNombre} />
         </View>
     );
 };
@@ -31,7 +33,7 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'space-around',
         alignItems: 'center',
-        backgroundColor: 'pink', // Cambia el color de fondo aquí
+        backgroundColor: 'lightgray', 
     },
     input: {
         width: '100%',
@@ -41,14 +43,15 @@ const styles = StyleSheet.create({
         borderRadius: 15,
         paddingHorizontal: 90,
         marginBottom: 30,
-        fontSize: 24, // Cambia el tamaño de la fuente aquí
-        color: 'black', // Cambia el color del texto aquí
+        fontSize: 24, 
+        
     },
     
     saludo: {
-        fontSize: 30, // Cambia el tamaño de la fuente del saludo aquí
-        color: 'green', // Cambia el color del saludo aquí
+        fontSize: 30, 
+        color: 'green', 
     },
+
 });
 
 export default BienvenidaApp;
